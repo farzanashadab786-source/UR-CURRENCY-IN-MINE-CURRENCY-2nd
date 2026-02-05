@@ -1,32 +1,23 @@
-<script>
-    function calculate() {
-        let val = document.getElementById("amt").value;
-        let rate = document.getElementById("curr").value;
-        let inr = val * rate;
-        document.getElementById("res").innerText = "₹ " + inr.toLocaleString('en-IN');
-
-        let p = document.getElementById("pic");
-        let n = document.getElementById("name");
-        p.style.display = "block";
-
-        if (inr >= 1000000000000) { 
-            n.innerText = "🚀 INTERNATIONAL SPACE STATION (ISS)";
-            p.src = "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=400";
-        } else if (inr >= 50000000) { 
-            n.innerText = "🏎️ BUGATTI CHIRON (Supercar)";
-            p.src = "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=400";
+        if (inr >= 1000000000) { 
+            n.innerText = "🏰 APNA PRIVATE ISLAND (Elite Level)";
+            p.src = "https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=400";
+        } else if (inr >= 100000000) { 
+            n.innerText = "🏎️ FERRARI + MANSION (King Life)";
+            p.src = "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=400";
+        } else if (inr >= 1000000) { 
+            n.innerText = "✈️ WORLD TOUR WITH FAMILY";
+            p.src = "https://images.unsplash.com/photo-1436491865332-7a61a109c0f3?w=400";
         } else if (inr >= 60000) { 
-            n.innerText = "💻 HIGH-END GAMING LAPTOP";
+            n.innerText = "💻 GAMING LAPTOP + SETUP";
             p.src = "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400";
-        } else if (inr >= 1000) { 
-            n.innerText = "📶 1 YEAR WIFI RECHARGE";
-            p.src = "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400";
-        } else if (inr >= 100) { 
-            n.innerText = "🍔 MC-DONALD'S BURGER";
-            p.src = "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400";
+        } else if (inr >= 15000) { 
+            n.innerText = "📱 NEW SMARTPHONE (Next Gen)";
+            p.src = "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400";
+        } else if (inr >= 500) { 
+            n.innerText = "🍕 PARTY WITH FRIENDS";
+            p.src = "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400";
         } else { 
-            n.innerText = "🍫 DAIRY MILK CHOCOLATE";
+            n.innerText = "🍫 CHHOTE SAPNE (Starting Point)";
             p.src = "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=400";
         }
-    }
-</script>
+        

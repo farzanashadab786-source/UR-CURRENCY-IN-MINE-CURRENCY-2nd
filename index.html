@@ -1,77 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aqdas: Mission Laptop 🚀</title>
-    <style>
-        body { background: #0a0b10; color: white; font-family: sans-serif; text-align: center; padding: 20px; }
-        .card { background: #1a1a1a; padding: 20px; border-radius: 20px; border: 2px solid gold; box-shadow: 0 0 15px gold; }
-        input, select { width: 85%; padding: 12px; margin: 10px 0; border-radius: 8px; border: none; font-size: 16px; }
-        button { background: gold; color: black; padding: 15px; width: 90%; border: none; border-radius: 10px; font-weight: bold; font-size: 18px; cursor: pointer; }
-        #res { color: #00ff88; font-size: 28px; margin: 15px 0; font-weight: bold; }
-        .img-frame { width: 250px; height: 250px; border: 3px solid gold; border-radius: 15px; margin: 20px auto; overflow: hidden; background: #000; display: flex; align-items: center; justify-content: center; }
-        img { width: 100%; height: 100%; object-fit: cover; display: none; }
-        #status { font-size: 20px; color: gold; font-weight: bold; }
-    </style>
-</head>
-<body>
+<script>
+    function calculate() {
+        let val = document.getElementById("amt").value;
+        let rate = document.getElementById("curr").value;
+        let inr = val * rate;
+        document.getElementById("res").innerText = "₹ " + inr.toLocaleString('en-IN');
 
-    <div class="card">
-        <h2>💰 MISSION: PAPA'S PRIDE</h2>
-        <input type="number" id="amt" placeholder="Amount likho...">
-        <select id="curr">
-            <option value="294">Kuwaiti Dinar (KWD)</option>
-            <option value="83">US Dollar (USD)</option>
-            <option value="22">Saudi Riyal (SAR)</option>
-            <option value="1">Indian Rupee (INR)</option>
-        </select>
-        <button onclick="calculate()">CHECK MY FUTURE 🚀</button>
-        <div id="res">₹ 0</div>
-    </div>
+        let p = document.getElementById("pic");
+        let n = document.getElementById("name");
+        p.style.display = "block";
 
-    <div id="status">Status: Beginner 🪙</div>
-    <div class="img-frame">
-        <p id="msg">Paisa dalo, Izzat dekho!</p>
-        <img id="pic" src="">
-    </div>
-    <h3 id="name" style="color: #00ff88;">???</h3>
-
-    <script>
-        function calculate() {
-            let val = document.getElementById("amt").value;
-            let rate = document.getElementById("curr").value;
-            if(!val) { alert("Bhai, kuch dalo!"); return; }
-
-            let inr = val * rate;
-            document.getElementById("res").innerText = "₹ " + inr.toLocaleString('en-IN');
-
-            let p = document.getElementById("pic");
-            let m = document.getElementById("msg");
-            let s = document.getElementById("status");
-            let n = document.getElementById("name");
-
-            p.style.display = "block";
-            m.style.display = "none";
-
-            if (inr >= 2000000000000) {
-                p.src = "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=400";
-                s.innerText = "Status: Einstein Level ⚛️";
-                n.innerText = "ANTI-MATTER UNLOCKED";
-            } else if (inr >= 60000) {
-                p.src = "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400";
-                s.innerText = "Status: Pro Coder 💻";
-                n.innerText = "GAMING LAPTOP (Goal)";
-            } else if (inr >= 500) {
-                p.src = "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400";
-                s.innerText = "Status: Hustler 📱";
-                n.innerText = "WIFI RECHARGE UNLOCKED";
-            } else {
-                p.src = "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=400";
-                s.innerText = "Status: Choti Shuruat 🍫";
-                n.innerText = "Dairy Milk Chocolate";
-            }
+        if (inr >= 1000000000000) { 
+            n.innerText = "🚀 INTERNATIONAL SPACE STATION (ISS)";
+            p.src = "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=400";
+        } else if (inr >= 50000000) { 
+            n.innerText = "🏎️ BUGATTI CHIRON (Supercar)";
+            p.src = "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=400";
+        } else if (inr >= 60000) { 
+            n.innerText = "💻 HIGH-END GAMING LAPTOP";
+            p.src = "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400";
+        } else if (inr >= 1000) { 
+            n.innerText = "📶 1 YEAR WIFI RECHARGE";
+            p.src = "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400";
+        } else if (inr >= 100) { 
+            n.innerText = "🍔 MC-DONALD'S BURGER";
+            p.src = "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400";
+        } else { 
+            n.innerText = "🍫 DAIRY MILK CHOCOLATE";
+            p.src = "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=400";
         }
-    </script>
-</body>
-</html>
+    }
+</script>
